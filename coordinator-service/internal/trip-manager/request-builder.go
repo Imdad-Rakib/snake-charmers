@@ -98,7 +98,7 @@ func SendTripRequest(payload Schemas.TripRequest) (Schemas.RequestBase, bool) {
 
 // RequestAmbulances finds available ambulances within a radius
 func RequestAmbulances(payload Schemas.TripRequest) ([]Schemas.Driver, bool) {
-	url := fmt.Sprintf("%s?radius=5&lat=%f&lon=%f", 
+	url := fmt.Sprintf("%s?radius=30&lat=%f&lon=%f", 
 		os.Getenv("AMBULANCE_FINDER_URL"), 
 		payload.Latitude, 
 		payload.Longitude,
